@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.BtcWalletFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/avenir_bold"
+            android:gravity="center"
+            android:text="BTC Wallet"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13ssp" />
+
+        <ImageView
+            android:id="@+id/imgHistory"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:src="@drawable/awesome_history"
+            app:tint="@color/colorBlack" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/linecolor"
+        android:layout_below="@+id/rl1"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_12sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/loginbackground"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize12Percent" />
+
+                    <LinearLayout
+                        android:id="@+id/ln"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_4sdp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bitcoin_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:text="Total Wallet Balance"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ln"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ln"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_14sdp"
+                            android:fontFamily="@font/avenir_bold"
+                            android:text="BTC "
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_13ssp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tvBalance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ln"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:fontFamily="@font/avenir_bold"
+                            android:text="0.000000"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_24ssp"
+                            android:textStyle="bold"
+
+                            />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/eyelash" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/btn_sendBitcoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/sendbitcoin_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:text="Send BTC  "
+                        android:textColor="#272070"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:src="@drawable/sendbitcoin_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_receiveBitcoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/receivebitcoin_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:text="Recieve BTC  "
+                        android:textColor="#219653"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:src="@drawable/receivebitcoin_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_sellBitCoin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/sellbitcoin_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:src="@drawable/sellbitcoin_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/avenir_medium"
+                    android:text="Sell Bitcoin From GCBUYING Wallet "
+                    android:textColor="#0A3026"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_wallet_round"
+                android:elevation="@dimen/_2sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yugothib"
+                        android:text="Total Wallet Balance"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yugothib"
+                        android:text="BTC 0.000000000"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+
+                        />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/bitcoin_white"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_95sdp"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_silver"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="Send Bitcoin"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_95sdp"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_silver"
+                    android:backgroundTint="#FEFAE0"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="Sell Bitcoin From \n GCBUYING wallet"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:src="@drawable/bitcoin" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#F1FEF2"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_weight="70"
+                    android:text="Receive Bitcoin"
+                    android:textColor="@color/colorBlack"
+
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/recieve_bitcoin" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#FEFAE0"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_weight="70"
+                    android:text="Transaction History"
+                    android:textColor="@color/colorBlack"
+
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/transaction_history" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_medium"
+                    android:text="Your GCBuying Bitcoin Address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/card_round"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etBitCoinAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_toLeftOf="@id/btn_Copy"
+                        android:background="@color/colorTransparent"
+                        android:editable="false"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:singleLine="true"
+                        android:text="Address here"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:id="@+id/btn_Copy"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/copy" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:fontFamily="@font/yugothib"
+                    android:text="Received History"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:fontFamily="@font/yugothib"
+                    android:text="Showing Latest History"
+                    android:textColor="@color/colorGrayText"
+                    android:textSize="@dimen/_8sdp"
+
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Received_History"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:fontFamily="@font/yugothib"
+                    android:text="Send History"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:fontFamily="@font/yugothib"
+                    android:text="Showing Latest History"
+                    android:textColor="@color/colorGrayText"
+                    android:textSize="@dimen/_8sdp"
+
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Send_History"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".Activities.CompletionActivity">
+
+
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/colorPrimary"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Order has been successfully placed \n and now processing"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/acumin_bd_pro"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_70sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/colorPrimary"
+            android:text="Go to home"
+            android:textAllCaps="true"
+            android:onClick="tohome"
+            android:textColor="@color/pdlg_color_white"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

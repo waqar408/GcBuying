@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">GC_Buying</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Username">
+        <font size="15">
+            Username
+        </font>
+    </string>
+    <string name="Email">
+        <font size="15">
+            Email
+        </font>
+    </string>
+    <string name="Password">
+        <font size="15">
+            Password
+        </font>
+    </string>
+    <string name="Confirm_Password">
+        <font size="15">
+            Confirm Password
+        </font>
+    </string>
+    <string name="Phone_Number">
+        <font size="15">
+            Phone Number
+        </font>
+    </string>
+    <string name="if_the_application_is">If the Application is difficult for you to understand, simply contact us on whatsapp 07048161101 to trade</string>
+
+    <string name="if_the_application_is1"><![CDATA[<b><font color=#FF0000>If the Application is difficult for you to understand, simply contact us on whatsapp 07048161101 to trade!</font></b>]]></string>
+    <string name="withdraw_your_balance">Withdraw Your Balance</string>
+
+    <string-array name="CardArray">
+        <item>Visa Card</item>
+        <item>Master</item>
+        <item>Local</item>
+
+    </string-array>
+
+</resources>

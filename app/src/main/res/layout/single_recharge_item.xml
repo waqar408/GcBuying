@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_transaction_round"
+        android:elevation="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_10sdp"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_5sdp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="TRANSACTION ID"
+                android:fontFamily="@font/yugothib"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/text_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="123456789"
+                android:gravity="center_vertical"
+                />
+
+            <LinearLayout
+                android:id="@+id/llSHoeHide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivDownShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                <ImageView
+                    android:id="@+id/ivUpShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:elevation="@dimen/_1sdp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="OPERATOR NAME"
+                    android:fontFamily="@font/yugothib"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_bankname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="BANK NAME"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="PHONE NUMBER"
+                    android:fontFamily="@font/yugothib"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_phonenumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="123456789"
+                    android:textSize="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="NAIRA AMOUNT"
+                    android:fontFamily="@font/yugothib"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_niraAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="445"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="BTC AMOUNT"
+                    android:fontFamily="@font/yugothib"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_btcAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="455"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="USD AMOUNT"
+                    android:fontFamily="@font/yugothib"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_usdAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="334$ "
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="STATUS"
+                    android:fontFamily="@font/yugothib"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Done"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="CREATED AT"
+                    android:fontFamily="@font/yugothib"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_created_Date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="22 Sep 2020"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="UPDATED AT"
+                    android:fontFamily="@font/yugothib"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_update_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="23 Aug 2020"
+                    android:textSize="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/_20sdp"-->
+<!--                android:layout_marginTop="@dimen/_5sdp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2"-->
+<!--                >-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.2"-->
+<!--                    android:text="Action"-->
+<!--                    android:fontFamily="@font/yugothib"-->
+<!--                    android:textSize="@dimen/_10sdp"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    />-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_action"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="0.8"-->
+<!--                    android:text="23 Aug 2020"-->
+<!--                    android:textSize="@dimen/_10sdp"/>-->
+
+
+<!--            </LinearLayout>-->
+            <TextView
+                android:id="@+id/tvClose"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:background="@drawable/round_shape_for_textview"
+                android:backgroundTint="@color/colorAccent"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="Close"
+                android:textColor="@color/colorWhite"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/text_showHide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See More"
+            android:textColor="@color/colorYellow"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

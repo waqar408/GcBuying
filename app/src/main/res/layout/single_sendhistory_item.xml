@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_transaction_round"
+        android:elevation="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_10sdp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_5sdp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="TRANSACTION ID"
+                android:fontFamily="@font/yugothib"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+
+                />
+
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/text_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="id"
+                android:layout_weight="0.8"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                app:trimLength="2"
+                app:trimMode="trimModeLine" />
+
+            <LinearLayout
+                android:id="@+id/llSHoeHide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivDownShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                <ImageView
+                    android:id="@+id/ivUpShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/trades_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_1sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+            >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:text="AMOUNT"
+                        android:fontFamily="@font/yugothib"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/text_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:text="445$"
+                        android:fontFamily="@font/yugothib"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:text="SEND FROM"
+                        android:fontFamily="@font/yugothib"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"
+
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/text_sendfrom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:text="ACCOUNT NAME"
+                        android:fontFamily="@font/yugothib"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:text="CONFIRMATIONS"
+                        android:fontFamily="@font/yugothib"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"
+
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/text_confirmation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:text="Yes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:text="TIME (UTC)"
+                        android:fontFamily="@font/yugothib"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"
+
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/text_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:text="21:02:40"
+                        android:fontFamily="@font/yugothib"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+            <TextView
+                android:id="@+id/tvClose"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:background="@drawable/round_shape_for_textview"
+                android:backgroundTint="@color/lightBlueColor"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="Close"
+                android:textColor="@color/colorWhite"
+
+                />
+
+            </LinearLayout>
+        <TextView
+            android:id="@+id/text_showHide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:visibility="gone"
+            android:textColor="@color/colorYellow"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>

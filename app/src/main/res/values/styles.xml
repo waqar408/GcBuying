@@ -1,0 +1,44 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+
+    </style>
+    <style name="Style_TextView">
+        <item name="fontFamily">@font/acumin_bd_pro</item>
+    </style>
+    <style name="MenuItems" parent="AppTheme">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/yugothib</item>
+    </style>
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/edittextoutlinecolor</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="android:radius">@dimen/_16sdp</item>
+    </style>
+
+    <style name="BottomItems" parent="AppTheme">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:fontFamily">@font/avenir_medium</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize12Percent" parent="">
+        <item name="cornerSize">12%</item>
+    </style>
+    <style name="myAppThemeForBottomSheet" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_back</item>
+    </style>
+</resources>

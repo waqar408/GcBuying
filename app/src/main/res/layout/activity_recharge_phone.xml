@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/loginbackground"
+    tools:context=".Activities.RechargePhoneActivity">
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:background="@drawable/round_corner">
+
+
+        <ImageView
+            android:id="@+id/back_ic"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/yugothib"
+            android:text="Mobile Recharge"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:src="@drawable/awesome_history" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_60sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_back"
+                    android:elevation="@dimen/_3sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlback"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/imgBack"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/ic_baseline_close_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Mobile Recharge"
+                            android:textColor="#5C578E"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/history"
+                            android:layout_width="@dimen/_17sdp"
+                            android:layout_height="@dimen/_17sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:src="@drawable/awesome_history"
+                            app:tint="@color/colorBlack" />
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/linecolor"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:fontFamily="@font/yugothib"
+                        android:text="Select Your Operator"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="@dimen/_16sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/card_round"
+                        >
+
+                        <Spinner
+                            android:id="@+id/card_Spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Select Your Card"
+                            android:textColorHint="@color/colorLightBlue" />
+
+
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/LoginTextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:elevation="@dimen/_8sdp"
+                        android:hint="Phone Number"
+                        android:textColorHint="@color/colorGray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                        app:hintTextColor="@color/colorBlack">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_phonenumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/avenir_medium"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:textCursorDrawable="@drawable/cursor_drawable"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/yugothib"
+                            android:text="Phone Number"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/card_round"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:paddingLeft="@dimen/_10sdp" />
+
+
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/LoginTextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:elevation="@dimen/_8sdp"
+                        android:hint="Amount in USD"
+                        android:textColorHint="@color/colorGray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                        app:hintTextColor="@color/colorBlack">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_usdAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/avenir_medium"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:textCursorDrawable="@drawable/cursor_drawable"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/yugothib"
+                            android:text="Amount in USD"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/card_round"
+
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/_10sdp" />
+
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/LoginTextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:elevation="@dimen/_8sdp"
+                        android:hint="Amount in USD (With VAT)"
+                        android:textColorHint="@color/colorGray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                        app:hintTextColor="@color/colorBlack">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_usdAmountVAT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/avenir_medium"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:textCursorDrawable="@drawable/cursor_drawable"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/yugothib"
+                            android:text="Amount in USD (With VAT)"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/card_round"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/_10sdp" />
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/LoginTextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:elevation="@dimen/_8sdp"
+                        android:hint="Total Amount (N)"
+                        android:textColorHint="@color/colorGray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                        app:hintTextColor="@color/colorBlack">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_nTotalAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/avenir_medium"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:textCursorDrawable="@drawable/cursor_drawable"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/yugothib"
+                            android:text="Total Amount (N)"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+
+                            android:background="@drawable/card_round"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/_10sdp" />
+
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/LoginTextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:elevation="@dimen/_8sdp"
+                        android:hint="Amount in BTC"
+                        android:textColorHint="@color/colorGray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                        app:hintTextColor="@color/colorBlack">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_btcAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/avenir_medium"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:textCursorDrawable="@drawable/cursor_drawable"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/yugothib"
+                            android:text="Amount in BTC"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+
+
+                            android:background="@drawable/card_round"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_medium"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:text="Please Pay to"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/card_round"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/ed_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_toLeftOf="@id/btn_Copy"
+                                android:background="@color/colorTransparent"
+                                android:editable="false"
+                                android:hint="19AS7JzC2QV1UG9ayqkWCxs8hJFE4a4aSH"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:paddingLeft="@dimen/_8sdp"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:id="@+id/btn_Copy"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentRight="true"
+                                android:scaleType="fitXY"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/copy" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/LoginTextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:elevation="@dimen/_8sdp"
+                        android:hint="Extra Information (Optional)"
+                        android:textColorHint="@color/colorGray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                        app:hintTextColor="@color/colorBlack">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/avenir_medium"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:textCursorDrawable="@drawable/cursor_drawable"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/yugothib"
+                            android:text="Extra Information (Optional)"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/card_round"
+                            android:gravity="start"
+                            android:imeOptions="actionDone"
+
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:textAlignment="viewStart" />
+
+
+                    </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:text="By continuing, you agree to accept our"
+                            android:textColor="@color/continuetotermcolor"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/avenir_bold"
+                                android:text="Privay Policy "
+                                android:textColor="@color/welcomelogincolor"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/yugothib"
+                                android:text="&amp; "
+                                android:textColor="@color/continuetotermcolor"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/avenir_bold"
+                                android:text="Terms of Serivces"
+                                android:textColor="@color/welcomelogincolor"
+                                android:textSize="@dimen/_11ssp" />
+                        </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_btnrecharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:background="@drawable/btn_round"
+                        android:text="RECHARGE"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:fontFamily="@font/yugothib"
+                    android:text="Recent Recharges"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:fontFamily="@font/yugothib"
+                    android:text="Showing Recent 5 Recharges"
+                    android:textColor="@color/colorGrayText"
+                    android:textSize="@dimen/_8sdp"
+
+                    />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Recharge_Phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

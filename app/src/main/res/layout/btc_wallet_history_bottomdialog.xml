@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/rlback"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="@dimen/_16sdp"
+        >
+
+        <ImageView
+            android:layout_marginStart="@dimen/_16sdp"
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_baseline_close_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Filter"
+            android:textColor="#5C578E"
+            android:textSize="@dimen/_13ssp" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/linecolor"
+        android:layout_below="@+id/rlback"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="Status"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_13ssp" />
+    <LinearLayout
+
+        android:id="@+id/ln"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_below="@+id/tv">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="All"
+            android:textAllCaps="false"
+            android:fontFamily="@font/avenir_medium"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_round"
+            android:layout_weight="1.1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_completed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Completed"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/avenir_medium"
+            android:textSize="@dimen/_9ssp"
+            android:layout_weight="0.9"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/btn_background_edit"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pending"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pending"
+            android:textAllCaps="false"
+            android:fontFamily="@font/avenir_medium"
+            android:textSize="@dimen/_9ssp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/btn_background_edit"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_failed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Failed"
+            android:textAllCaps="false"
+            android:fontFamily="@font/avenir_medium"
+            android:textSize="@dimen/_9ssp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/btn_background_edit"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ln"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@color/colorGray" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="Date"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_13ssp" />
+
+    <LinearLayout
+        android:id="@+id/lns"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_below="@+id/tv3"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:elevation="@dimen/_8sdp"
+            android:hint="From"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:textColorHint="@color/colorGray"
+            app:boxCornerRadiusBottomEnd="@dimen/_4sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_4sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_4sdp"
+            app:boxCornerRadiusTopStart="@dimen/_4sdp"
+            app:hintTextColor="@color/colorBlack">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:cursorVisible="true"
+                android:fontFamily="@font/avenir_medium"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:textSize="@dimen/_11ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:elevation="@dimen/_8sdp"
+            android:hint="To"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textColorHint="@color/colorGray"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:hintTextColor="@color/colorBlack">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:fontFamily="@font/avenir_medium"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:textSize="@dimen/_11ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/lns"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_36sdp"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="Reset"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/avenir_medium"
+            android:textSize="@dimen/_11ssp"
+            android:background="@drawable/btn_reset_background"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_4sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_4sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_4sdp"
+            app:boxCornerRadiusTopStart="@dimen/_4sdp"
+
+            >
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/btn_round"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_4sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_4sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_4sdp"
+            app:boxCornerRadiusTopStart="@dimen/_4sdp"
+            android:text="Confirm"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/avenir_medium">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+</RelativeLayout>

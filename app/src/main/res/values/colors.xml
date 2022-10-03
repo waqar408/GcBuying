@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#241C71</color>
+    <color name="colorPrimaryDark">#241C71</color>
+    <color name="colorAccent">#241C71</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#3699FF</color>
+    <color name="colorGray">#C4C4C4</color>
+    <color name="colorYellow">#FFA800</color>
+    <color name="colorLightBlue">#1BC5BD</color>
+    <color name="colorView">#FFFBFB</color>
+    <color name="colorGrayText">#A4A4A4</color>
+    <color name="lightBlue">#3699FF</color>
+    <color name="lightBlueColor">#503699FF</color>
+    <color name="greenSucess">#4BB543</color>
+
+    <color name="colorTransparent">@android:color/transparent</color>
+    <color name="light_green">#F1FEF2</color>
+
+
+
+    <color name="splashbackcolor">#D9EBE6</color>
+    <color name="textcolor">#241C71</color>
+    <color name="welcomelogincolor">#241C71</color>
+    <color name="signintextcolor">#343157</color>
+    <color name="edittextoutlinecolor">#4A3FBC</color>
+    <color name="forgotpasswordtextcolor">#0B0357</color>
+    <color name="donthaveaccount">#E3E4E8</color>
+    <color name="wearehappy">#5D5A74</color>
+    <color name="non_selected_bottom_nav">#B5B4BD</color>
+    <color name="textcolorlight">#241C71B3</color>
+    <color name="continuetotermcolor">#9C9C9C</color>
+    <color name="linecolor">#E8E8E8</color>
+    <color name="historydetailtext">#7874A0</color>
+    <color name="historytext">#131036</color>
+    <color name="unselectedtext">#9A9A9A</color>
+    <color name="completedTextColor">#D4FFE6</color>
+    <color name="pendingTextColor">#FFE3D8</color>
+    <color name="completedTextColors">#00BD50</color>
+    <color name="pendingTextColors">#FF743C</color>
+</resources>
+

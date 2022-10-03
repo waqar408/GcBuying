@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/splashbackcolor"
+    tools:context=".Activities.SplashActvity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_12sdp"
+    >
+  <TextView
+      android:id="@+id/tv_skip"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Skip"
+      android:textColor="@color/textcolor"
+      android:textSize="@dimen/_13ssp"
+      android:layout_gravity="end"
+      android:gravity="end"
+      android:textStyle="bold"
+      />
+</LinearLayout>
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:background="@drawable/round_corner"
+    android:layout_height="0dp"
+    android:layout_weight="0.7"
+    android:visibility="gone">
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/logo_white"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:layout_weight="0.6"
+      android:layout_gravity="center"
+      />
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:background="@drawable/uper_curve_card_shap_whiteback">
+  <androidx.viewpager.widget.ViewPager
+      android:id="@+id/viewPager"
+      android:layout_width="match_parent"
+      android:layout_marginTop="@dimen/_30sdp"
+      android:layout_height="0dp"
+      android:clipToPadding="false"
+      android:layout_gravity="center_horizontal"
+      android:overScrollMode="never"
+      android:layout_weight="2"
+      />
+  <TextView
+      android:visibility="gone"
+      android:id="@+id/tvwelcome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:textSize="@dimen/_18ssp"
+      android:text="welcome"
+      android:textStyle="bold"
+      android:layout_marginHorizontal="@dimen/_12sdp"
+      android:layout_marginBottom="@dimen/_66sdp"/>
+
+
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="@dimen/_24sdp"
+      >
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageindicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:piv_animationType="worm"
+        app:piv_dynamicCount="true"
+        app:piv_selectedColor="@color/textcolor"
+        app:piv_unselectedColor="#E0E0E0"
+        app:piv_viewPager="@id/viewPager"
+        tools:ignore="MissingClass" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:text="Skip"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold" />
+
+
+
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:paddingBottom="@dimen/_12sdp"
+      >
+
+    <ImageView
+        android:id="@+id/imgskip"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@color/textcolor" />
+  </RelativeLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

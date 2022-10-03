@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_rounded_bg"
+    android:backgroundTint="@color/colorWhite"
+    android:elevation="@dimen/_2sdp"
+    android:gravity="center"
+    android:minWidth="320dp"
+    android:orientation="vertical"
+    tools:context=".PopFragments.ChangeBankDeatilsFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/cross" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/avenir_bold"
+            android:text="Details"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:elevation="@dimen/_8sdp"
+            android:hint="BANK NAME/NETWORK"
+            android:textColorHint="@color/colorGray"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:hintTextColor="@color/colorBlack">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_bankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:fontFamily="@font/avenir_medium"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:textSize="@dimen/_11ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/yugothib"
+            android:text="BANK NAME/NETWORK"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp" />
+
+        <EditText
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/card_round"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp" />
+
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:elevation="@dimen/_8sdp"
+        android:hint="Account Name"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:textColorHint="@color/colorGray"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+        app:hintTextColor="@color/colorBlack">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_accountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:fontFamily="@font/avenir_medium"
+            android:inputType="text"
+            android:textColor="@color/colorBlack"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:textSize="@dimen/_11ssp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/yugothib"
+            android:text="Account Name"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/card_round"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp" />
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:elevation="@dimen/_8sdp"
+        android:hint="ACCOUNT NUMBER/ MOMO NO"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:textColorHint="@color/colorGray"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+        app:hintTextColor="@color/colorBlack">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_accountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:fontFamily="@font/avenir_medium"
+            android:inputType="text"
+            android:textColor="@color/colorBlack"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:textSize="@dimen/_11ssp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/yugothib"
+            android:text="ACCOUNT NUMBER/ MOMO NO"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/card_round"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_updatebankDetails"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_round"
+        android:fontFamily="@font/yugothib"
+        android:text="Update Bank Details"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+
+
+        />
+</LinearLayout>

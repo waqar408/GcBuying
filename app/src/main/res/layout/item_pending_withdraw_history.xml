@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgwallet"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/bluewallet"
+        android:scaleType="fitXY"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgwallet"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:background="@drawable/back_withdraw_history"
+        >
+        <RelativeLayout
+            android:id="@+id/rls"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            >
+
+            <TextView
+                android:id="@+id/tvNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/avenir_bold"
+                android:gravity="center_vertical"
+                android:text="Balance Withdrawal"
+                android:textColor="#54447C"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/tvNotes"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center_vertical"
+                android:text="12:00 pm"
+                android:textSize="@dimen/_8ssp" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/pending_background"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center"
+                android:text="Pending"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_8ssp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvNGNAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rls"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:fontFamily="@font/avenir_medium"
+            android:text="NGN 96,000"
+            android:textColor="#353062"
+            android:textSize="@dimen/_11ssp" />
+    </RelativeLayout>
+
+</RelativeLayout>

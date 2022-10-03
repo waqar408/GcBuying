@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    >
+
+    <TextView
+        android:id="@+id/tvBtc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/avenir_bold"
+        android:text="0.05 Btc"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/_11ssp" />
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@drawable/sent_btngreen"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/avenir_medium"
+            android:gravity="center"
+            android:text="Completed"
+            android:textColor="#078A4B"
+            android:textSize="@dimen/_9ssp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvToBtc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBtc"
+        android:layout_marginEnd="@dimen/_80sdp"
+        android:fontFamily="@font/avenir_bold"
+        android:maxLines="2"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="Sent Btc to 13kjdknar9g843r3endj3jdwien9e2"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/_11ssp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvToBtc"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_80sdp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="12-03-2020"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/_11ssp" />
+    <View
+        android:layout_below="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/colorGray"
+        android:layout_marginTop="@dimen/_8sdp"/>
+</RelativeLayout>

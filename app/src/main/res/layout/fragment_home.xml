@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mSwipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textcolor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.HomeFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_36sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:text="GOOD MORNING, "
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:src="@drawable/sun" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/bg_wallet_round"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ln"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_4sdp"
+                            android:src="@drawable/wallet_ic_white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:text="Total Wallet Balance"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ln"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/yugothib"
+                        android:gravity="center_horizontal"
+                        android:text="NGN 0.00"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_17ssp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/imgHide"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:padding="@dimen/_12ssp"
+                        android:src="@drawable/eyelash" />
+
+                    <ImageView
+                        android:id="@+id/imgShow"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:padding="@dimen/_12ssp"
+                        android:src="@drawable/visible_icon"
+                        app:tint="@color/pdlg_color_white" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/bg_round"
+                    android:elevation="@dimen/_2sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/announcement_ic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:fontFamily="@font/yugothib"
+                            android:text="Announcement"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/ViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:layout_weight="2"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never" />
+
+
+                    <com.rd.PageIndicatorView
+                        android:id="@+id/pageindicator"
+                        AnimationType.SLIDE="0.0.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        app:piv_dynamicCount="true"
+                        app:piv_interactiveAnimation="true"
+                        app:piv_selectedColor="@color/colorBlue"
+                        app:piv_unselectedColor="#99B8EF"
+                        app:piv_viewPager="@id/ViewPager"
+                        tools:ignore="MissingClass" />
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_36sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/uper_curve_card_shap_whiteback">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:id="@+id/llSellGift"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:background="@drawable/sell_gift_card_back"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="@dimen/_6sdp">
+                                    <ImageView
+                                        android:id="@+id/img1"
+                                        android:layout_width="@dimen/_30sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:src="@drawable/sellgiftardicon"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_16sdp"/>
+                                    <TextView
+                                        android:layout_below="@+id/img1"
+                                        android:id="@+id/tv1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sell Gift Card"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="@dimen/_11ssp"
+                                        android:fontFamily="@font/avenir_medium"
+                                        android:layout_marginStart="@dimen/_8sdp"/>
+                                    <RelativeLayout
+                                        android:layout_marginBottom="@dimen/_16sdp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_25sdp"
+                                        android:layout_marginTop="@dimen/_36sdp"
+                                        android:background="@drawable/sellgiftcardbutton">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/avenir_medium"
+                                            android:gravity="center"
+                                            android:text="Sell"
+                                            android:textColor="#241C71"
+                                            android:textSize="@dimen/_11ssp" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:id="@+id/sel_bit"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:background="@drawable/bitcoinbackground"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="@dimen/_6sdp">
+                                    <ImageView
+                                        android:id="@+id/img2"
+                                        android:layout_width="@dimen/_30sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:src="@drawable/bitcoinion"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_16sdp"/>
+                                    <TextView
+                                        android:layout_below="@+id/img2"
+                                        android:id="@+id/tv2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sell Bitcoin from External Wallet"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:textColor="#412610"
+                                        android:textSize="@dimen/_11ssp"
+                                        android:fontFamily="@font/avenir_medium"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:layout_marginEnd="@dimen/_4sdp"/>
+                                    <RelativeLayout
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="@dimen/_16sdp"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_25sdp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/_36sdp"
+                                        android:background="@drawable/bitcoinbuttonbackground">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/avenir_medium"
+                                            android:gravity="center"
+                                            android:text="Explore"
+                                            android:textColor="#FF8C00"
+                                            android:textSize="@dimen/_11ssp" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:id="@+id/btn_bankDetails"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:background="@drawable/bank_detail_background"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="@dimen/_6sdp">
+                                    <ImageView
+                                        android:id="@+id/img3"
+                                        android:layout_width="@dimen/_30sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:src="@drawable/bankdetail"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_16sdp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/img3"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:fontFamily="@font/avenir_medium"
+                                        android:text="Banking Details/Payment Info"
+                                        android:textColor="@color/textcolor"
+                                        android:layout_marginEnd="@dimen/_4sdp"
+                                        android:textSize="@dimen/_11ssp" />
+                                    <RelativeLayout
+                                        android:layout_marginBottom="@dimen/_16sdp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_25sdp"
+                                        android:layout_marginTop="@dimen/_36sdp"
+                                        android:background="@drawable/bankdetail_button">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/avenir_medium"
+                                            android:gravity="center"
+                                            android:text="Explore"
+                                            android:textColor="#0A3026"
+                                            android:textSize="@dimen/_11ssp" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:id="@+id/btn_phoneRecharge"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:background="@drawable/phonereharge_background"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="@dimen/_6sdp">
+
+                                    <ImageView
+                                        android:id="@+id/img4"
+                                        android:layout_width="@dimen/_30sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_16sdp"
+                                        android:src="@drawable/phonerecharge" />
+
+                                    <TextView
+                                        android:id="@+id/tv4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/img4"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:layout_marginEnd="@dimen/_4sdp"
+                                        android:fontFamily="@font/avenir_medium"
+                                        android:text="Mobile Recharge"
+                                        android:textColor="#023748"
+                                        android:textSize="@dimen/_11ssp" />
+                                    <RelativeLayout
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="@dimen/_16sdp"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_25sdp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/_36sdp"
+                                        android:background="@drawable/phonerecharge_button">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/avenir_medium"
+                                            android:gravity="center"
+                                            android:text="Explore"
+                                            android:textColor="#02428D"
+                                            android:textSize="@dimen/_11ssp" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:background="@drawable/bg_silver"
+                            android:backgroundTint="#EFEBFB"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_weight="70"
+                                android:text="Sell Gift Card"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="30"
+
+                                android:src="@drawable/mask" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_margin="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="#FEFAE0"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_weight="70"
+                                android:text="Sell Bitcoin From \n External Wallet"
+
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="30"
+                                android:src="@drawable/call" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_margin="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="#F1FEF2"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_weight="70"
+                                android:text="BANK DETAILS/PAYMENT INFO"
+                                android:textColor="@color/colorBlack"
+
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="30"
+
+                                android:src="@drawable/bank" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_margin="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="#FEFAE0"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_weight="70"
+                                android:text="Mobile Recharge"
+                                android:textColor="@color/colorBlack"
+
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="30"
+
+                                android:src="@drawable/ring" />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:weightSum="3"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.8" />
+
+                            <Button
+                                android:id="@+id/btn_sendGiftCard"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="@dimen/_2sdp"
+                                android:layout_weight="1.7"
+                                android:background="@drawable/buttons_round"
+                                android:drawableLeft="@drawable/bitcoin_ic"
+                                android:elevation="@dimen/_2sdp"
+                                android:paddingLeft="@dimen/_20sdp"
+                                android:text="Sell Gift Card"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorYellow"
+                                android:textSize="@dimen/_10sdp"
+
+
+                                />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+
+                            android:weightSum="3"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.9" />
+
+                            <Button
+                                android:id="@+id/btn_sellBitCoin"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="@dimen/_2sdp"
+                                android:layout_weight="1.7"
+                                android:background="@drawable/buttons_round"
+                                android:drawableLeft="@drawable/bitcoin_ic"
+                                android:elevation="@dimen/_2sdp"
+                                android:paddingLeft="@dimen/_20sdp"
+                                android:text="Sell Bitcoin From\nExternal Wallet"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorYellow"
+                                android:textSize="@dimen/_10sdp"
+
+
+                                />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+
+                            android:weightSum="3"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="@dimen/_2sdp"
+                                android:layout_weight="1.7"
+                                android:background="@drawable/buttons_round"
+                                android:drawableLeft="@drawable/wallet_icon"
+                                android:elevation="@dimen/_2sdp"
+                                android:paddingLeft="@dimen/_20sdp"
+                                android:text="Enter Bank Details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorYellow"
+                                android:textSize="@dimen/_10sdp"
+
+
+                                />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal"
+
+                            android:visibility="gone"
+                            android:weightSum="3"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.1" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="@dimen/_2sdp"
+                                android:layout_weight="1.7"
+                                android:background="@drawable/buttons_round"
+                                android:drawableLeft="@drawable/mobile_ic"
+                                android:elevation="@dimen/_2sdp"
+                                android:paddingLeft="@dimen/_20sdp"
+                                android:text="Mobile Recharge"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorYellow"
+                                android:textSize="@dimen/_10sdp"
+
+
+                                />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Card Rates"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_13ssp"
+                                android:fontFamily="@font/avenir_bold" />
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/single_cardrates_item"></androidx.recyclerview.widget.RecyclerView>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</RelativeLayout>
